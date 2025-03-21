@@ -9,13 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/mainCss.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
 <body>
 <!-- header -->
  <header class="headerPart">
-<a href="#" class="logo"><img src="./Images/camera_logo1-removebg-preview (1).png" class="logo" alt="logo camera"></a>
-    <nav class="navBar">
+<a href="#" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="700"><img src="./Images/camera_logo1-removebg-preview (1).png" class="logo" alt="logo camera"></a>
+    <nav class="navBar" data-aos="slide-left" data-aos-duration="1400" data-aos-delay="800" >
     <a href="#" class="navLink active">Home</a>
     <a href="#" class="navLink">About</a>
     <a href="#" class="navLink">Profile</a>
@@ -26,29 +27,37 @@
 <!-- section -->
 <section class="home">
     <div class="homeContent">
-        <h1>Hi! I'm Fatemeh.</h1>
-        <h3>FrontEnd Developer</h3>
-        <p>A personalized and optimistic representation of Fatemeh, a 28-year-old woman with a rounded face and curly hair, in her successful future. She is depicted in a bright and modern office in the UK, working as a front-end developer for a top company, surrounded by sleek monitors displaying creative coding and web design projects. On her desk, there are colored pencils and sketches, reflecting her love for drawing. In the background, a beautiful view of London’s skyline is visible through large windows. Beside her, a traditional Persian Tar leans against the desk, symbolizing her passion for music. The atmosphere is warm, inspiring, and filled with a sense of achievement.</p>
+        <h1 data-aos="fade-up" data-aos-duration="1400"  data-aos-delay="150">Hi! I'm Fatemeh.</h1>
+        <h3 data-aos="fade-down" data-aos-duration="1800"  data-aos-delay="200">FrontEnd Developer</h3>
+        <p data-aos="zoom-in-up" data-aos-duration="1800"  data-aos-delay="200">A personalized and optimistic representation of Fatemeh, a 28-year-old in her successful future. She is depicted in a bright and modern office in the UK, working as a front-end developer for a top company, surrounded by sleek monitors displaying creative coding and web design projects.</p>
     <!-- buttons -->
-    <div class="btnPart">
+    <div class="btnPart"  data-aos="flip-down" data-aos-duration="1400" data-aos-delay="400">
         <a href="#"class="btnBox">Hire Me</a>
         <a href="#"class="btnBox">Let's Talk</a>
     </div>
     </div>
 <!-- icons -->
-    <div class="homeIcon">
+    <div class="homeIcon" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="350">
         <a href="#" class="iconLink"><i class='bx bxl-facebook'></i></a>
         <a href="#" class="iconLink"><i class='bx bxl-linkedin' ></i></a>
         <a href="#" class="iconLink"><i class='bx bxl-whatsapp'></i></a>
     </div>
 
     <!-- image -->
-     <span class="homeImageHover"></span>
+    <span class="homeImageHover"></span>
+
 </section>
+<!-- script -->
+<script src="./js/script.js"></script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+  ({
+    offset: 1,
+    })
+  );
+</script>
 
-
-
-    <script src="./js/script.js"></script>
 </body>
 </html>

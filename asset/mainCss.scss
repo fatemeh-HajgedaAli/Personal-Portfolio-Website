@@ -39,6 +39,17 @@ display: block;
 width: 35%;
 height: auto;
 margin-left:-5% ;}
+.logo::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background-color:var(--background-color);
+animation: showRight 3s ease forwards;
+animation-delay: 250ms;
+}
 //navigation part
 .navBar{
 display: flex;
@@ -58,35 +69,35 @@ color: var(--main-color);
 font-weight: 600;
 }}}
 .home{
-   display: flex;
-   align-items: center; 
-   height: 100vh;
-   padding: 0 10%;
-   background: url(../Images/mainFace-removebg-preview.png);
-   background-repeat: no-repeat;
-   background-size:27.5%;
-   background-position:100%;
-   .homeContent{
-    max-width: 600px;
-   }
-   h1{
-    font-size: var(--font-big);
-    font-weight: 700;
-    padding-bottom: 1rem;
-   }
-   h3{
-    font-size: var(--font-medium);
-    font-weight: 600;
-    color:var(--main-color);
-    padding-bottom: 1rem;
-   }
-   p{
-    font-size: var(--font-p);
-    font-weight: 400;
-    color:var(--text-color);
-    padding: 1rem 0;
-    line-height: 1.5;
-   }
+display: flex;
+align-items: center; 
+height: 100vh;
+padding: 0 10%;
+background: url(../Images/mainFace-removebg-preview.png);
+background-repeat: no-repeat;
+background-size:27.5%;
+background-position:100%;
+.homeContent{
+ max-width: 600px;
+}
+h1{
+ font-size: var(--font-big);
+ font-weight: 700;
+ padding-bottom: 1rem;
+}
+h3{
+ font-size: var(--font-medium);
+ font-weight: 600;
+ color:var(--main-color);
+ padding-bottom: 1rem;
+}
+p{
+ font-size: var(--font-p);
+ font-weight: 400;
+ color:var(--text-color);
+ padding:1rem 0 3rem 0;
+ line-height: 1.5;
+}
 //button 
 .btnPart {
 display: inline-flex;
@@ -111,11 +122,11 @@ z-index: 1;
 overflow: hidden;
 }
 //second btn
-.btnPart .btnBox:nth-child(2) {
+.btnPart .btnBox {
 background-color: transparent;
 color: var(--second-color);
 }
-.btnPart .btnBox:nth-child(2):hover {
+.btnPart .btnBox:hover {
 color: var(--background-color);
 }
 }
@@ -131,7 +142,7 @@ z-index: -1;
 transition:width 550ms ease-in-out;
 }
 .btnBox:hover:before{
-    width: 100%;
+width: 100%;
 }
 //icons part
 .homeIcon{
@@ -163,7 +174,7 @@ color: #081b29;
 content: '';
 position: absolute;
 top: 0;
-left: 0;
+right: 0;
 width: 0;//it should be 0 and after the hover is applying is become more and more.
 height: 100%;
 border-radius: 50%;
@@ -178,16 +189,23 @@ width:100%;
 //we make this part for hovering the picture that we give it to the background,  
 //At first we give style to it after that we Hover it.
 .homeImageHover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    height: 100%;
-    background-color: transparent;
-    transition: 3s;
-    cursor: pointer;
+position: absolute;
+top: 0;
+right:-9%;
+width: 500px;
+height: 100%;
+background-color: transparent;
+transition: 3s;
+cursor: pointer;
 }
 .homeImageHover:hover{
 background-color: var(--background-color);// we give this color to make the hidden picture nicer.
 opacity: 0.9;
+}
+
+/*keyframe animation*/
+@keyframes showRight {
+    100%{
+        width:0 ;
+    }
 }
